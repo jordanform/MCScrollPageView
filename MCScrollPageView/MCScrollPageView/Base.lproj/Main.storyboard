@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MCScrollPageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbi-YM-kRD">
+                                <rect key="frame" x="243" y="241" width="114" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="Dip-qX-vAq"/>
+                                    <constraint firstAttribute="height" constant="40" id="zDZ-d2-ZwL"/>
+                                </constraints>
+                                <state key="normal" title="Show Page view"/>
+                                <connections>
+                                    <action selector="showPageView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SJs-HO-o6Z"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HKj-G1-t1l">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="MCScrollPageView" id="B7U-dx-xNa"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HKj-G1-t1l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7o3-91-CMO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HKj-G1-t1l" secondAttribute="trailing" constant="-20" id="Azb-gW-0JR"/>
+                            <constraint firstItem="gbi-YM-kRD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-39" id="LZ7-iV-duO"/>
+                            <constraint firstItem="HKj-G1-t1l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="YMk-5m-tLW"/>
+                            <constraint firstItem="gbi-YM-kRD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m0d-iY-Jna"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HKj-G1-t1l" secondAttribute="bottom" constant="536" id="pyI-MZ-c10"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pyI-MZ-c10"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="navBar" destination="HKj-G1-t1l" id="u5h-Wq-l4n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="464"/>
+        </scene>
+    </scenes>
+</document>
